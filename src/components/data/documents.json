@@ -1,0 +1,18 @@
+[
+    {
+        "docId": 1,
+        "docType": "docx",
+        "docName": "Hardware testing doc",
+        "dateModified": "March 18/3/2023",
+        "modifiedBy": "John Smith",
+        "fileSize": "32 kb"
+    },
+    {
+        "docId": 2,
+        "docType": "pdf",
+        "docName": "Agreement License",
+        "dateModified": "March 19/3/2023",
+        "modifiedBy": "John Smith",
+        "fileSize": "60 kb"
+    }
+]

@@ -1,0 +1,14 @@
+.card-footer { 
+    display: flex !important;
+    width: 300px;
+}
+
+.card-footer { 
+    display: flex;
+    flex-direction: row;
+    flex-flow: space-between;
+}
+
+.date-logo { 
+    margin-left: 100px;
+}
