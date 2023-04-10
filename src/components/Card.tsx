@@ -13,10 +13,16 @@ import {
 import { mergeStyles } from "@fluentui/react/lib/Styling";
 import { TestImages } from "@fluentui/example-data";
 import { FontWeights } from "@fluentui/theme";
-import {} from "@fluentui/react";
+import { Link } from "@fluentui/react";
 import { initializeIcons } from "@fluentui/font-icons-mdl2";
 import { Icon } from "@fluentui/react/lib/Icon";
 import { Depths } from "@fluentui/theme";
+import OpenStatusLogo from "../svg/openStatus.svg";
+import ClosedStatusLogo from "../svg/closedStatus.svg";
+import InProgressStatusLogo from "../svg/inProgressStatus.svg";
+import OpenStatusLogoNew from "../svg/openStatusNew.svg";
+import ClosedStatusLogoNew from "../svg/closedStatusNew.svg";
+import InProgressStatusLogoNew from "../svg/inProgressStatusNew.svg";
 
 initializeIcons();
 
@@ -25,29 +31,31 @@ const conversationTileClass = mergeStyles({ height: 182 });
 const MyIcon = () => <Icon iconName="CompassNW" />;
 
 type CardProps = {
+  caseNumber: number;
   caseName: string;
   dateCreated: string;
   casePerson: string;
   caseDescription: string;
   numberOfAttachments: number;
   personImageUrl: string;
-
+  caseStatus: string;
 };
 
 export const Card: React.FC<CardProps> = ({
+  caseNumber,
   caseName = "",
   dateCreated,
-  casePerson, 
-  caseDescription, 
+  casePerson,
+  caseDescription,
   numberOfAttachments,
-  personImageUrl
-
+  personImageUrl,
+  caseStatus,
 }) => {
   const DocumentCardActivityPeople = [
-    { name: casePerson, profileImageSrc: personImageUrl},
+    { name: casePerson, profileImageSrc: personImageUrl },
   ];
   const logoProps: IDocumentCardLogoProps = {
-    logoIcon: "Ticket",
+    logoIcon: OpenStatusLogo,
   };
 
   const cardStyles: IDocumentCardStyles = {
@@ -65,37 +73,47 @@ export const Card: React.FC<CardProps> = ({
     root: { fontWeight: FontWeights.semibold },
   };
 
+  const currentStatus =
+    caseStatus === "open"
+      ? OpenStatusLogoNew
+      : caseStatus === "in progress"
+      ? InProgressStatusLogoNew
+      : ClosedStatusLogoNew;
   return (
-    <div>
-      <DocumentCard
-        aria-label={
-          "Document Card with logo, text preview, and status. Conversation about annual report. " +
-          "Content preview. 3 attachments. Sent by Annie Lindqvist and 2 others in March 13, 2018."
-        }
-        styles={cardStyles}
-        onClickHref="http://bing.com"
-      >
-        <DocumentCardLogo {...logoProps} />
-        <div className={conversationTileClass}>
-          <DocumentCardTitle
-            title={caseName}
-            shouldTruncate
-            styles={cardTitleStyles}
-          />
-          <DocumentCardTitle
-            title={caseDescription}
-            shouldTruncate = {true}
-            showAsSecondaryTitle
-          />
+    <Link to={`/cases/${caseNumber}`}>
+      <div key={caseNumber}>
+        <DocumentCard
+          aria-label={
+            "Document Card with logo, text preview, and status. Conversation about annual report. " +
+            "Content preview. 3 attachments. Sent by Annie Lindqvist and 2 others in March 13, 2018."
+          }
+          styles={cardStyles}
+          onClickHref={`/cases/${caseNumber}`}
+        >
+          <div className="card-logo-container">
+            <img src={currentStatus} />
+          </div>
 
-          <DocumentCardStatus statusIcon="attach" status="3 Attachments" />
-        </div>
-        <DocumentCardActivity
-          activity={dateCreated}
-          people={DocumentCardActivityPeople}
-        />
-      </DocumentCard>
-    </div>
+          <div className={conversationTileClass}>
+            <DocumentCardTitle
+              title={caseName}
+              shouldTruncate
+              styles={cardTitleStyles}
+            />
+            <DocumentCardTitle
+              title={caseDescription}
+              shouldTruncate={true}
+              showAsSecondaryTitle
+            />
+            <DocumentCardStatus statusIcon="attach" status="3 Attachments" />
+          </div>
+          <DocumentCardActivity
+            activity={dateCreated}
+            people={DocumentCardActivityPeople}
+          />
+        </DocumentCard>
+      </div>
+    </Link>
   );
 };
 

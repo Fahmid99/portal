@@ -79,7 +79,7 @@ function DocumentList(props: DocumentListProps) {
       maxWidth: 350,
       isRowHeader: true,
       isResizable: true,
-      isSorted: true,
+     
       isSortedDescending: false,
       sortAscendingAriaLabel: "Sorted A to Z",
       sortDescendingAriaLabel: "Sorted Z to A",
@@ -90,8 +90,8 @@ function DocumentList(props: DocumentListProps) {
       key: "column3",
       name: "Date Modified",
       fieldName: "dateModified",
-      minWidth: 70,
-      maxWidth: 110,
+      minWidth: 100,
+      maxWidth: 150,
       isResizable: true,
       data: "number",
       isPadded: true,
@@ -121,7 +121,6 @@ function DocumentList(props: DocumentListProps) {
 
   return (
     <div>
-        <h2>All Documents</h2>
       <DetailsList
         items={props.documentData}
         columns={columns}

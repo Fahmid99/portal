@@ -3,7 +3,7 @@ import { ActivityItem, Icon, Link, mergeStyleSets } from '@fluentui/react';
 
 const classNames = mergeStyleSets({
   exampleRoot: {
-    marginTop: '20px',
+    
   },
   nameText: {
     fontWeight: 'bold',
