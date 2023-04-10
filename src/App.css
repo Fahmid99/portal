@@ -1,8 +1,5 @@
-
-.root { 
- 
+.root {
 }
-
 
 .App {
   display: flex;
@@ -13,9 +10,7 @@
   height: 100vh;
   margin: 0;
   padding: 0;
- 
 }
-
 
 .cases-container {
   border: 1px solid #e1dfdd;
@@ -147,7 +142,7 @@ div.view-case-left-col-header ul li {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
 }
 .view-case-left-col-footer {
-  width: 721px;
+  width: 720px;
   height: 320px;
   left: 156px;
   top: 690px;
@@ -160,9 +155,10 @@ div.view-case-left-col-header ul li {
 }
 .view-case-right-col-header {
   width: 305px;
-  height: 140px;
+  height: 100%;
   left: 960px;
   top: 104px;
+  padding-bottom: 20px;
 
   background: #ffffff;
 
@@ -172,7 +168,8 @@ div.view-case-left-col-header ul li {
 }
 .view-case-right-col-body {
   width: 305px;
-  height: 753px;
+  height: 100%;
+  padding-bottom: 20px;
 
   background: #ffffff;
 
@@ -214,15 +211,19 @@ div.view-case-left-col-header ul li {
   margin-top: 20px;
 }
 
-div.view-case-left-col-body  { 
+div.view-case-left-col-body {
   padding-top: 5px;
 }
 
-div.view-case-left-col-body p  { 
- margin-left: 10px;
+div.view-case-left-col-body p {
+  margin-left: 10px;
 }
 
-.card-logo-container { 
+.card-logo-container {
   margin-top: 20px;
   margin-left: 14px;
+}
+
+.status-container {
+  display: flex;
 }

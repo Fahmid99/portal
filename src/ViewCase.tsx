@@ -81,7 +81,7 @@ export const ViewCase: React.FC<ViewCaseProps> = ({ cases }) => {
         >
           <Stack.Item>
             <div className="view-case-left-col-header-bar">
-              <h1>{caseToShow?.caseNumber}</h1>
+              <h1>Case No.{caseToShow?.caseNumber}</h1>
             </div>
             <div className="view-case-left-col-header">
               <Stack>
@@ -108,8 +108,11 @@ export const ViewCase: React.FC<ViewCaseProps> = ({ cases }) => {
                       </ul>
                     </Stack.Item>
                     <Stack.Item>
+                    <div className="status-container">
                       <div className="status-header">
-                        <h1>Status:</h1><img src={currentStatus}></img>
+                        <h1>Status:</h1>
+                      </div>
+                      <img src={currentStatus} alt=""></img>
                       </div>
                     </Stack.Item>
                   </Stack>
@@ -161,6 +164,13 @@ export const ViewCase: React.FC<ViewCaseProps> = ({ cases }) => {
             </div>
             <div className="view-case-right-col-header">
               <div className="view-case-right-col-header-content">
+                <Persona
+                  {...examplePersona}
+                  size={PersonaSize.size40}
+                  presence={PersonaPresence.none}
+                  imageAlt="Annie Ried, status is unknown"
+                />
+                <Separator />
                 <Persona
                   {...examplePersona}
                   size={PersonaSize.size40}
