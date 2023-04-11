@@ -4,10 +4,22 @@
     "person": "Arto Hellas",
     "caseNumber": 1,
     "dateCreated": "March 18/3/2023",
-    "caseDescription": "There was a problem logging in",
+    "caseDescription": "A customer experiencing login problems can be a frustrating experience for them. They may be unable to access important information, and it may impede their ability to conduct business or complete transactions. The customer may encounter issues such as forgetting their login credentials or experiencing technical difficulties on the login page. They may also be experiencing issues due to a recent update or changes to the login process.A customer experiencing login problems can be a frustrating experience for them. They may be unable to access important information, and it may impede their ability to conduct business or complete transactions. The customer may encounter issues such as forgetting their login credentials or experiencing technical difficulties on the login page. They may also be experiencing issues due to a recent update or changes to the login process.A customer experiencing login problems can be a frustrating experience for them. They may be unable to access important information, and it may impede their ability to conduct business or complete transactions. The customer may encounter issues such as forgetting their login credentials or experiencing technical difficulties on the login page. They may also be experiencing issues due to a recent update or changes to the login process.A customer experiencing login problems can be a frustrating experience for them. They may be unable to access important information, and it may impede their ability to conduct business or complete transactions. The customer may encounter issues such as forgetting their login credentials or experiencing technical difficulties on the login page. They may also be experiencing issues due to a recent update or changes to the login process.A customer experiencing login problems can be a frustrating experience for them. They may be unable to access important information, and it may impede their ability to conduct business or complete transactions. The customer may encounter issues such as forgetting their login credentials or experiencing technical difficulties on the login page. They may also be experiencing issues due to a recent update or changes to the login process.A customer experiencing login problems can be a frustrating experience for them. They may be unable to access important information, and it may impede their ability to conduct business or complete transactions. The customer may encounter issues such as forgetting their login credentials or experiencing technical difficulties on the login page. They may also be experiencing issues due to a recent update or changes to the login process.feqfqefqfqfeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeedddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
     "numberOfAttachments": 3,
     "personImageUrl": "https://i.pravatar.cc/150?img=3",
-    "caseStatus": "open"
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "James Tan",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "Customer Service"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
   },
   {
     "caseName": "Signup Error",
@@ -17,7 +29,19 @@
     "caseDescription": "There was a problem logging in",
     "numberOfAttachments": 0,
     "personImageUrl": "",
-    "caseStatus": "open"
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
   },
   {
     "caseName": "Portal not loading",
@@ -27,7 +51,30 @@
     "caseDescription": "I can't see portal page",
     "numberOfAttachments": 1,
     "personImageUrl": "",
-    "caseStatus": "closed"
+    "caseStatus": "closed",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+      
+    ]
   },
   {
     "caseName": "Hardware Issue",
@@ -37,7 +84,19 @@
     "caseDescription": "There was a problem logging in",
     "numberOfAttachments": 3,
     "personImageUrl": "",
-    "caseStatus": "in progress"
+    "caseStatus": "in progress",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
   },
   {
     "caseName": "Software Issue",
@@ -47,6 +106,326 @@
     "caseDescription": "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
     "numberOfAttachments": 3,
     "personImageUrl": "",
-    "caseStatus": "open"
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Hardware Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 4,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "There was a problem logging in",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "in progress",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Software Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 5,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Hardware Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 4,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "There was a problem logging in",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "in progress",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Software Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 5,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Hardware Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 4,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "There was a problem logging in",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "in progress",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Software Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 5,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Hardware Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 4,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "There was a problem logging in",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "in progress",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Software Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 5,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Hardware Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 4,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "There was a problem logging in",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "in progress",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Software Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 5,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Hardware Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 4,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "There was a problem logging in",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "in progress",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Software Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 5,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Hardware Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 4,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "There was a problem logging in",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "in progress",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "Lenny Set",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
+  },
+  {
+    "caseName": "Software Issue",
+    "person": "Mary Poppendieck",
+    "caseNumber": 5,
+    "dateCreated": "March 18/3/2023",
+    "caseDescription": "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
+    "numberOfAttachments": 3,
+    "personImageUrl": "",
+    "caseStatus": "open",
+    "assignedPeople": [
+      {
+        "assignedPersonName": "John Smith",
+        "assignedPersonInitial": "JS",
+        "assignedPersonRole": "HR"
+      },
+      {
+        "assignedPersonName": "Bob Sam",
+        "assignedPersonInitial": "BS",
+        "assignedPersonRole": "Developer"
+      }
+    ]
   }
 ]

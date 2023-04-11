@@ -27,15 +27,6 @@ import ClosedStatusLogoNew from "./svg/closedStatusNew.svg";
 const wrapStackTokens: IStackTokens = { childrenGap: 30 };
 const headerStackTokens: IStackTokens = { childrenGap: 30 };
 
-const examplePersona: IPersonaSharedProps = {
-  imageUrl: TestImages.personaFemale,
-  imageInitials: "AR",
-  text: "Annie Reid",
-  secondaryText: "Designer",
-  tertiaryText: "In a meeting",
-  optionalText: "Available at 4:00pm",
-  showSecondaryText: true,
-};
 type Case = {
   caseName: string;
   person: string;
@@ -45,22 +36,25 @@ type Case = {
   numberOfAttachments: number;
   personImageUrl: string;
   caseStatus: string;
+  assignedPeople: any;
 };
 
 interface ViewCaseProps {
   cases: Case[];
 }
 
-
 export const ViewCase: React.FC<ViewCaseProps> = ({ cases }) => {
   const { id } = useParams<{ id: string }>();
   const caseToShow = cases.find((c) => c.caseNumber.toString() === id);
   const currentStatus =
-  caseToShow?.caseStatus === "open"
-    ? OpenStatusLogoNew
-    : caseToShow?.caseStatus === "in progress"
-    ? InProgressStatusLogoNew
-    : ClosedStatusLogoNew;
+    caseToShow?.caseStatus === "open"
+      ? OpenStatusLogoNew
+      : caseToShow?.caseStatus === "in progress"
+      ? InProgressStatusLogoNew
+      : ClosedStatusLogoNew;
+
+  const contributers = caseToShow?.assignedPeople;
+
   return (
     <div>
       <Stack
@@ -108,11 +102,11 @@ export const ViewCase: React.FC<ViewCaseProps> = ({ cases }) => {
                       </ul>
                     </Stack.Item>
                     <Stack.Item>
-                    <div className="status-container">
-                      <div className="status-header">
-                        <h1>Status:</h1>
-                      </div>
-                      <img src={currentStatus} alt=""></img>
+                      <div className="status-container">
+                        <div className="status-header">
+                          <h1>Status:</h1>
+                        </div>
+                        <img src={currentStatus} alt=""></img>
                       </div>
                     </Stack.Item>
                   </Stack>
@@ -138,7 +132,9 @@ export const ViewCase: React.FC<ViewCaseProps> = ({ cases }) => {
             <div className="view-case-left-col-header-bar">
               <h1>Case Information</h1>
             </div>
-            <div className="view-case-left-col-body"><p>{caseToShow?.caseDescription}</p></div>
+            <div className="view-case-left-col-body">
+              <p>{caseToShow?.caseDescription}</p>
+            </div>
           </Stack.Item>
           <Stack.Item>
             <div className="view-case-left-col-header-bar">
@@ -164,26 +160,19 @@ export const ViewCase: React.FC<ViewCaseProps> = ({ cases }) => {
             </div>
             <div className="view-case-right-col-header">
               <div className="view-case-right-col-header-content">
-                <Persona
-                  {...examplePersona}
-                  size={PersonaSize.size40}
-                  presence={PersonaPresence.none}
-                  imageAlt="Annie Ried, status is unknown"
-                />
-                <Separator />
-                <Persona
-                  {...examplePersona}
-                  size={PersonaSize.size40}
-                  presence={PersonaPresence.none}
-                  imageAlt="Annie Ried, status is unknown"
-                />
-                <Separator />
-                <Persona
-                  {...examplePersona}
-                  size={PersonaSize.size40}
-                  presence={PersonaPresence.none}
-                  imageAlt="Annie Ried, status is unknown"
-                />
+                {contributers.map((contributer: any) => (
+                  <>
+                    <Persona
+                      text={contributer.assignedPersonName}
+                      secondaryText={contributer.assignedPersonRole}
+                      imageUrl=""
+                      size={PersonaSize.size40}
+                      presence={PersonaPresence.none}
+                      imageAlt="Annie Ried, status is unknown"
+                    />
+                    <Separator />
+                  </>
+                ))}
               </div>
             </div>
           </Stack.Item>

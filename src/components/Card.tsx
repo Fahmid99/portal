@@ -66,6 +66,7 @@ export const Card: React.FC<CardProps> = ({
       borderColor: "#e1dfdd",
       boxShadow: Depths.depth16,
       marginBottom: 20,
+      overflow: "auto"
     },
   };
 
@@ -102,7 +103,7 @@ export const Card: React.FC<CardProps> = ({
             />
             <DocumentCardTitle
               title={caseDescription}
-              shouldTruncate={true}
+              
               showAsSecondaryTitle
             />
             <DocumentCardStatus statusIcon="attach" status="3 Attachments" />

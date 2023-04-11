@@ -5,7 +5,7 @@ import {
   SelectionMode,
   IColumn,
 } from "@fluentui/react/lib/DetailsList";
-import { Depths, PrimaryButton } from "@fluentui/react";
+import { Depths, Link, PrimaryButton } from "@fluentui/react";
 import cases from "./data/cases.json";
 
 const listStyle = {
@@ -13,7 +13,6 @@ const listStyle = {
     marginTop: 20,
     boxShadow: Depths.depth16,
     marginBottom: 30,
-    
   },
 };
 
@@ -94,7 +93,11 @@ export class ListView extends React.Component<
         onColumnClick: this._onColumnClick,
         data: "number",
         onRender: (item: IDocument) => {
-          return <PrimaryButton text="View" onClick={_alertClicked} />;
+          return (
+            <Link to={`/cases/1`}>
+              <PrimaryButton text="View" onClick={_alertClicked} />{" "}
+            </Link>
+          );
         },
         isPadded: true,
       },
@@ -109,15 +112,12 @@ export class ListView extends React.Component<
     };
 
     function _alertClicked(): void {
-      alert("Clicked");
+      "window.location.href='https://w3docs.com';"
     }
   }
 
   public render() {
-    const {
-      columns,
-      items,
-    } = this.state;
+    const { columns, items } = this.state;
 
     return (
       <div>

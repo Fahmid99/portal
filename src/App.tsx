@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -44,12 +44,24 @@ function App() {
     overflowMenuButton: undefined,
   };
 
-  const { id } = useParams();
-  console.log(id);
-  console.log("id from URL: ", id);
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  const CARDS_PER_PAGE = 8;
+  const getCardsForPage = (page: number, cardsPerPage: number) => {
+    const startIndex = (page - 1) * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
+    return cases.slice(startIndex, endIndex);
+  };
+  
+
+  cases.sort((a, b) => {
+    const statusOrder: {  [key: string]: number } = { 'open': 1, 'in progress': 2, 'closed': 3 };
+    return statusOrder[a.caseStatus] - statusOrder[b.caseStatus];
+  });
+
 
   return (
-    <Router>
+    <Router>  
       <div className="App">
         <Routes>
           <Route
@@ -65,6 +77,21 @@ function App() {
                       styles={pivotStyles}
                     >
                       <PivotItem headerText="Card View" className="pivot-css">
+                        <div className="pages-container">
+                          {Array.from({
+                            length: Math.ceil(cases.length / CARDS_PER_PAGE),
+                          }).map((item, index) => (
+                            <button
+                              key={index}
+                              onClick={() => setCurrentPage(index + 1)}
+                              disabled={currentPage === index + 1}
+                            >
+                              {index + 1}
+                            </button>
+                          ))}
+                        </div>
+                        
+
                         <Stack
                           enableScopedSelectors
                           horizontal
@@ -73,23 +100,25 @@ function App() {
                           tokens={wrapStackTokens}
                           horizontalAlign="start"
                         >
-                          {cases.map((card) => (
-                            <Link
-                              key={card.caseNumber}
-                              to={`/cases/${card.caseNumber}`}
-                            >
-                              <Card
-                                caseName={card.caseName || " "}
-                                dateCreated={card.dateCreated}
-                                casePerson={card.person}
-                                caseDescription={card.caseDescription}
-                                numberOfAttachments={card.numberOfAttachments}
-                                personImageUrl={card.personImageUrl}
-                                caseNumber={card.caseNumber}
-                                caseStatus={card.caseStatus}
-                              />
-                            </Link>
-                          ))}
+                          {getCardsForPage(currentPage, CARDS_PER_PAGE).map(
+                            (card) => (
+                              <Link
+                                key={card.caseNumber}
+                                to={`/cases/${card.caseNumber}`}
+                              >
+                                <Card
+                                  caseName={card.caseName || " "}
+                                  dateCreated={card.dateCreated}
+                                  casePerson={card.person}
+                                  caseDescription={card.caseDescription}
+                                  numberOfAttachments={card.numberOfAttachments}
+                                  personImageUrl={card.personImageUrl}
+                                  caseNumber={card.caseNumber}
+                                  caseStatus={card.caseStatus}
+                                />
+                              </Link>
+                            )
+                          )}
                         </Stack>
                       </PivotItem>
                       <PivotItem headerText="List View">
@@ -110,8 +139,10 @@ function App() {
               </>
             }
           />
-          <Route path="/cases/:id" Component={(props: any) => <ViewCase cases={cases} {...props} />} />
-
+          <Route
+            path="/cases/:id"
+            Component={(props: any) => <ViewCase cases={cases} {...props} />}
+          />
         </Routes>
       </div>
     </Router>
